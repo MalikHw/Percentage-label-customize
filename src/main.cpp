@@ -80,7 +80,7 @@ class $modify(PctPlayLayer, PlayLayer) {
 		}
 
 		auto win = CCDirector::get()->getWinSize();
-		float margin = 10.f;
+		float margin = static_cast<float>(mod->getSettingValue<double>("margin"));
 		float ax = 0.5f, ay = 0.5f, x = win.width / 2, y = win.height / 2;
 
 		if (pos.starts_with("Top")) { ay = 1.f; y = win.height - margin; }

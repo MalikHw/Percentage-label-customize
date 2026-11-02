@@ -101,6 +101,21 @@
 				"Custom"
 			]
 		},
+		"margin": {
+			"type": "float",
+			"name": "Margin",
+			"description": "Distance in pixels from the screen edge. Has no effect on the center axis.",
+			"default": 10.0,
+			"min": 0.0,
+			"max": 200.0,
+			"control": {
+				"slider": true,
+				"input": true,
+				"arrows": true,
+				"arrow-step": 1,
+				"slider-step": 1
+			}
+		},
 		"custom-font": {
 			"type": "file",
 			"name": "Custom Font (.ttf)",
