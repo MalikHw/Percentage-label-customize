@@ -1,19 +1,153 @@
 {
-    "geode": "5.11.2",
-    "gd": {
-        "win": "2.2081",
-        "mac": "2.2081",
-        "android": "2.2081"
-    },
-    "version": "1.0.0",
-    "id": "MalikHw.Percentage-label-customize",
-    "name": "Percentage-label-customize",
-    "developer": "MalikHw",
-    "description": "desc.",
-    "tags": ["yes", "yeah"],
-    "links": {
-        "source": "https://github.com/MalikHw/Percentage-label-customize",
-        "community": "https://discord.gg/G9bZ92eg2n"
-    },
-    "settings": {}
+	"geode": "5.11.2",
+	"gd": {
+		"android": "2.2081",
+		"mac": "2.2081"
+	},
+	"id": "malikhw47.percentage-style",
+	"name": "Percentage Style",
+	"version": "v1.0.0",
+	"developer": "MalikHw47",
+	"description": "Change the size, color, font, position and opacity of the ingame percentage label",
+	"settings": {
+		"size": {
+			"type": "float",
+			"name": "Size",
+			"description": "Scale of the percentage label. GD's default is 0.5.",
+			"default": 0.5,
+			"min": 0.1,
+			"max": 3.0,
+			"control": {
+				"slider": true,
+				"input": true,
+				"arrows": true,
+				"arrow-step": 0.05,
+				"slider-step": 0.05
+			}
+		},
+		"color": {
+			"type": "color",
+			"name": "Color",
+			"default": "#ffffff"
+		},
+		"font": {
+			"type": "string",
+			"name": "Font",
+			"description": "Built-in GD font, or Custom to use the .ttf picked below.",
+			"default": "bigFont",
+			"one-of": [
+				"bigFont",
+				"goldFont",
+				"chatFont",
+				"gjFont01",
+				"gjFont02",
+				"gjFont03",
+				"gjFont04",
+				"gjFont05",
+				"gjFont06",
+				"gjFont07",
+				"gjFont08",
+				"gjFont09",
+				"gjFont10",
+				"gjFont11",
+				"gjFont12",
+				"gjFont13",
+				"gjFont14",
+				"gjFont15",
+				"gjFont16",
+				"gjFont17",
+				"gjFont18",
+				"gjFont19",
+				"gjFont20",
+				"gjFont21",
+				"gjFont22",
+				"gjFont23",
+				"gjFont24",
+				"gjFont25",
+				"gjFont26",
+				"gjFont27",
+				"gjFont28",
+				"gjFont29",
+				"gjFont30",
+				"gjFont31",
+				"gjFont32",
+				"gjFont33",
+				"gjFont34",
+				"gjFont35",
+				"gjFont36",
+				"gjFont37",
+				"gjFont38",
+				"gjFont39",
+				"gjFont40",
+				"gjFont41",
+				"gjFont42",
+				"gjFont43",
+				"gjFont44",
+				"gjFont45",
+				"gjFont46",
+				"gjFont47",
+				"gjFont48",
+				"gjFont49",
+				"gjFont50",
+				"gjFont51",
+				"gjFont52",
+				"gjFont53",
+				"gjFont54",
+				"gjFont55",
+				"gjFont56",
+				"gjFont57",
+				"gjFont58",
+				"gjFont59",
+				"Custom"
+			]
+		},
+		"custom-font": {
+			"type": "file",
+			"name": "Custom Font (.ttf)",
+			"description": "Only used when Font is set to Custom. Falls back to bigFont if the file can't be found.",
+			"default": "",
+			"control": {
+				"dialog": "open",
+				"filters": [
+					{
+						"files": [
+							"*.ttf"
+						],
+						"description": "TrueType fonts"
+					}
+				]
+			}
+		},
+		"position": {
+			"type": "string",
+			"name": "Position",
+			"default": "Top Center",
+			"one-of": [
+				"Top Left",
+				"Top Center",
+				"Top Right",
+				"Center Left",
+				"Center",
+				"Center Right",
+				"Bottom Left",
+				"Bottom Center",
+				"Bottom Right"
+			]
+		},
+		"opacity": {
+			"type": "int",
+			"name": "Opacity",
+			"description": "0 is invisible, 100 is fully opaque.",
+			"default": 100,
+			"min": 0,
+			"max": 100,
+			"control": {
+				"slider": true,
+				"input": true,
+				"arrows": true,
+				"arrow-step": 1,
+				"slider-step": 1
+			}
+		}
+	}
 }
