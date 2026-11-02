@@ -40,7 +40,7 @@ class $modify(PctPlayLayer, PlayLayer) {
 		}
 
 		CCNode* target = label;
-		CCRGBAProtocol* rgba = label;
+		CCLabelTTF* ttf = nullptr;
 		auto f = m_fields.self();
 
 		if (!ttfPath.empty()) {
@@ -60,7 +60,7 @@ class $modify(PctPlayLayer, PlayLayer) {
 			f->ttfLabel->setVisible(label->isVisible());
 			label->setOpacity(0); // original stays in the tree, just invisible
 			target = f->ttfLabel;
-			rgba = f->ttfLabel;
+			ttf = f->ttfLabel;
 		} else {
 			if (f->ttfLabel) {
 				f->ttfLabel->removeFromParent();
@@ -71,8 +71,13 @@ class $modify(PctPlayLayer, PlayLayer) {
 		}
 
 		target->setScale(size);
-		rgba->setColor(color);
-		rgba->setOpacity(opacity);
+		if (ttf) {
+			ttf->setColor(color);
+			ttf->setOpacity(opacity);
+		} else {
+			label->setColor(color);
+			label->setOpacity(opacity);
+		}
 
 		auto win = CCDirector::get()->getWinSize();
 		float margin = 10.f;
