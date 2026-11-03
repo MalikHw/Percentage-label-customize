@@ -2,13 +2,14 @@
 	"geode": "5.11.2",
 	"gd": {
 		"android": "2.2081",
-		"mac": "2.2081"
+		"mac": "2.2081",
+		"windows": "2.2081"
 	},
-	"id": "malikhw47.percentage-style",
-	"name": "Percentage Style",
+	"id": "malikhw47.progress-percentage-customized",
+	"name": "Progress Percentage Customized",
 	"version": "v1.0.0",
 	"developer": "MalikHw47",
-	"description": "Change the size, color, font, position and opacity of the ingame percentage label",
+	"description": "Change the size, color, font, position and opacity of the ingame progrsss percentage label",
 	"settings": {
 		"size": {
 			"type": "float",
