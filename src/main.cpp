@@ -33,9 +33,8 @@ class $modify(PctPlayLayer, PlayLayer) {
 		// custom ttf, needs a separate label
 		std::string ttfPath;
 		if (font == "Custom") {
-			auto path = mod->getSettingValue<std::filesystem::path>("custom-font");
-			std::error_code ec;
-			if (!path.empty() && std::filesystem::exists(path, ec)) ttfPath = path.string();
+			auto path = mod->getSettingValue<asp::fs::Path>("custom-font"); // THATS THE ENTIRE THING TO PORT BTW
+			if (!path.string().empty() && path.exists()) ttfPath = path.string();
 			else font = "bigFont";
 		}
 

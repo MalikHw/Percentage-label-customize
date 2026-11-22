@@ -1,13 +1,13 @@
 {
-	"geode": "5.11.2",
+	"geode": "6.0.0-beta.0",
 	"gd": {
-		"android": "2.2081",
-		"mac": "2.2081",
-		"win": "2.2081"
+		"android": "2.2091",
+		"mac": "2.2091",
+		"win": "2.2091"
 	},
 	"id": "malikhw47.progress-percentage-customized",
 	"name": "Progress Percentage Customized",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "MalikHw47",
 	"description": "Change the size, color, font, position and opacity of the ingame progrsss percentage label",
 	"settings": {
