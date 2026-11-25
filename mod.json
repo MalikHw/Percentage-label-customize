@@ -166,5 +166,9 @@
 				"slider-step": 1
 			}
 		}
+	},
+	"dependencies": {
+		"geode.node-ids": ">=1.0.0",
+		"required": true
 	}
 }

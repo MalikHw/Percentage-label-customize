@@ -100,7 +100,8 @@ class $modify(PctPauseLayer, PauseLayer) {
 		PauseLayer::customSetup();
 
 		auto menu = this->getChildByID("right-button-menu");
-		if (!menu) return;
+		// if (!menu) return;
+		// ts existed my bad
 
 		auto txt = CCLabelBMFont::create("%", "goldFont.fnt");
 		auto spr = CircleButtonSprite::create(txt, CircleBaseColor::Green, CircleBaseSize::Small);
