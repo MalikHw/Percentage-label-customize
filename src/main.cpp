@@ -99,7 +99,7 @@ class $modify(PctPauseLayer, PauseLayer) {
 	void customSetup() {
 		PauseLayer::customSetup();
 
-		auto menu = this->getChildByID("right-button-menu");
+		auto menu = this->getChildByIDRecursive("right-button-menu"); // yea forgot to add Recursive
 		// if (!menu) return;
 		// ts existed my bad
 
