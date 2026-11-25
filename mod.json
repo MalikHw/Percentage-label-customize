@@ -3,11 +3,12 @@
 	"gd": {
 		"android": "2.2091",
 		"mac": "2.2091",
-		"win": "2.2091"
+		"win": "2.2091",
+		"ios": "2.2091"
 	},
 	"id": "malikhw47.progress-percentage-customized",
 	"name": "Progress Percentage Customized",
-	"version": "v1.0.2",
+	"version": "v1.1.0",
 	"developer": "MalikHw47",
 	"description": "Change the size, color, font, position and opacity of the ingame progrsss percentage label",
 	"settings": {

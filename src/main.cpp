@@ -1,5 +1,7 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
+#include <Geode/modify/PauseLayer.hpp>
+#include <Geode/ui/GeodeUI.hpp>
 
 using namespace geode::prelude;
 
@@ -90,5 +92,26 @@ class $modify(PctPlayLayer, PlayLayer) {
 
 		target->setAnchorPoint({ax, ay});
 		target->setPosition({x, y});
+	}
+};
+
+class $modify(PctPauseLayer, PauseLayer) {
+	void customSetup() {
+		PauseLayer::customSetup();
+
+		auto menu = this->getChildByID("right-button-menu");
+		if (!menu) return;
+
+		auto txt = CCLabelBMFont::create("%", "goldFont.fnt");
+		auto spr = CircleButtonSprite::create(txt, CircleBaseColor::Green, CircleBaseSize::Small);
+		auto btn = CCMenuItemSpriteExtra::create(spr, this, menu_selector(PctPauseLayer::onPctSettings));
+		btn->setID("settings-button"_spr);
+
+		menu->addChild(btn);
+		menu->updateLayout();
+	}
+
+	void onPctSettings(CCObject*) {
+		openSettingsPopup(Mod::get(), false);
 	}
 };
