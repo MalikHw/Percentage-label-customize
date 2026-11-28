@@ -104,7 +104,7 @@ class $modify(PctPauseLayer, PauseLayer) {
 		// ts existed my bad
 
 		auto txt = CCLabelBMFont::create("%", "goldFont.fnt");
-		auto spr = CircleButtonSprite::create(txt, CircleBaseColor::Green, CircleBaseSize::Small);
+		auto spr = CircleButtonSprite::create(txt, CircleBaseColor::Green, CircleBaseSize::Tiny);
 		auto btn = CCMenuItemSpriteExtra::create(spr, this, menu_selector(PctPauseLayer::onPctSettings));
 		btn->setID("settings-button"_spr);
 
